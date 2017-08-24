@@ -1,6 +1,6 @@
 var secondHand = document.querySelector('.sec-hand');
 var hourHand = document.querySelector('.hour-hand');
-var minuteHand = document.querySelector('min-hand');
+var minuteHand = document.querySelector('.min-hand');
 
 //setting the date and getting the current time
 function setDate() {
@@ -17,6 +17,11 @@ function setDate() {
     var hoursDegrees = ((hours / 12) * 360) + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
     console.log(seconds);
+
+    //getting the minutes of the current date and time
+    var minutes = now.getHours();
+    var minutesDegrees = ((minutes / 60) * 360) + 90;
+    minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
 
 }
