@@ -1,4 +1,4 @@
-var secondHand = document.querySelector('.second-hand');
+var secondHand = document.querySelector('.sec-hand');
 
 //setting the date and getting the current time
 function setDate() {
@@ -7,6 +7,8 @@ function setDate() {
     var now = new Date();
     //getting the seconds of the current date and time
     var seconds = now.getSeconds();
+    var secondsDegrees = ((seconds / 60) * 360);
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     console.log(seconds);
 }
 
